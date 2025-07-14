@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Header1 from "@/components/mvpblocks/header-1";
 
@@ -23,8 +25,10 @@ export default function RootLayout({ children }) {
 		<html lang='en'>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<Header1  />
-				<main className="pt-16 lg:pt-20 ">{children}</main>
+				<Header1 />
+				<main className='pt-16 lg:pt-20'>{children}</main>
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
