@@ -2,11 +2,11 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -125,3 +125,4 @@
     @apply bg-background text-foreground;
   }
 }
+
