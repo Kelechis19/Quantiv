@@ -87,7 +87,7 @@ export default function Header1() {
 				<div className='flex h-16 items-center justify-between lg:h-20'>
 					<motion.div
 						className='flex items-center space-x-2'
-						whileHover={{ scale: 1.05 }}>
+						>
 						<Link href='/' className='flex items-center space-x-2'>
 							<div className='flex h-8 w-8 items-center justify-center rounded-lg bg-[#6a45ff]'>
 								<Image src='/cart.svg' alt='Logo' width={20} height={20} />
@@ -204,7 +204,7 @@ export default function Header1() {
 									</Link>
 									<Link
 										href='/signup'
-										className='block w-full rounded-lg bg-gradient-to-r from-rose-500 to-rose-700 py-2.5 text-center font-medium text-white transition-all duration-200 hover:shadow-lg'
+										className='block w-full rounded-lg bg-[#6a45ff] from-rose-500 to-rose-700 py-2.5 text-center font-medium text-white transition-all duration-200 hover:shadow-lg'
 										onClick={() => setIsMobileMenuOpen(false)}>
 										Get Started
 									</Link>
