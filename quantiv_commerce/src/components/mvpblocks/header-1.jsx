@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 
 const navItems = [
-	{ name: "Home", href: "/" },
+	// { name: "Home", href: "/" },
 	{ name: "Features", href: "/features" },
 	{
 		name: "Products",
@@ -29,7 +29,7 @@ const navItems = [
 		],
 	},
 	{ name: "Pricing", href: "/pricing" },
-	{ name: "About", href: "/about" },
+	{ name: "Contact", href: "/contact" },
 ];
 
 export default function Header1() {
@@ -155,7 +155,7 @@ export default function Header1() {
 							className='font-medium text-foreground transition-colors duration-200 hover:text-[#6a45ff]'>
 							Sign In
 						</Link>
-						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+						<motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.95 }}>
 							<Link
 								href='/signup'
 								className='inline-flex items-center space-x-2 rounded-lg bg-gradient-to-r from-[#6a45ff] to-[#6a45ff]/150 px-4 py-2 font-medium text-white transition-all duration-200 hover:shadow-lg '>
