@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Play, ChartColumn } from "lucide-react";
+import { Play, ChartColumn, ShoppingBag, TrendingUp } from "lucide-react";
 import {
 	Card,
 	CardAction,
@@ -10,6 +10,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import { Featurecard } from "@/components/web/FeatureCard";
+import { FeatureSection } from "@/components/web/FeatureSection";
 
 export default function Home() {
 	return (
@@ -84,22 +86,49 @@ export default function Home() {
 					to help you build, manage, and grow your online business effortlessly!
 				</span>
 			</div>
-			<div className=' items-center justify-center px-6 py-6 lg:px-25 lg:pt-10 overflow-hidden  '>
+			<div className=''>
+				{/* <Card>
+					<CardHeader>
+						<CardTitle className=''>
+							<ChartColumn className='text-[#8B5CF6] transform bg-purple-100 rounded w-10 h-10 p-2   ' />
+						</CardTitle>
+
+						<CardTitle className='pt-3 '>Advanced Analytics</CardTitle>
+					</CardHeader>
+
+					<CardDescription className=''>
+						Get deep insights into your sales performance, customer behavior,
+						and market trends with our powerful analytics dashboard.
+					</CardDescription>
+				</Card>
 				<Card>
 					<CardHeader>
-						<CardTitle>
-							<ChartColumn className="text-[#8B5CF6] transform hover:scale-[1.02] bg-purple-100 rounded w-10 h-10 p-2  " />
+						<CardTitle className=''>
+							<ShoppingBag className='text-[#8B5CF6] transform hover:scale-[1.02] bg-purple-100 rounded w-10 h-10 p-2   ' />
 						</CardTitle>
-						<CardDescription>Card Description</CardDescription>
-						<CardAction>Card Action</CardAction>
+
+						<CardTitle className='pt-3'>Inventory Management</CardTitle>
 					</CardHeader>
-					<CardContent>
-						<p>Card Content</p>
-					</CardContent>
-					<CardFooter>
-						<p>Card Footer</p>
-					</CardFooter>
+
+					<CardDescription className='flex items-center justify-center '>
+						Get deep insights into your sales performance, customer behavior,
+						and market trends with our powerful analytics dashboard.
+					</CardDescription>
 				</Card>
+				<Card>
+					<CardHeader>
+						<CardTitle className=''>
+							<TrendingUp className='text-[#8B5CF6] transform hover:scale-[1.02] bg-purple-100 rounded w-10 h-10 p-2   ' />
+						</CardTitle>
+
+						<CardTitle className='pt-3'>Sales Optimization</CardTitle>
+					</CardHeader>
+
+					<CardDescription className='pl-6'>
+						Boost your revenue with AI-powered recommendations, dynamic pricing, and conversion rate optimization tools.
+					</CardDescription>
+				</Card> */}
+				<FeatureSection/>
 			</div>
 		</main>
 	);
