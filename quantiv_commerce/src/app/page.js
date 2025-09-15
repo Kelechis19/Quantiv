@@ -1,16 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Play, ChartColumn, ShoppingBag, TrendingUp } from "lucide-react";
-import {
-	Card,
-	CardAction,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
-import { Featurecard } from "@/components/web/FeatureCard";
+import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import { FeatureSection } from "@/components/web/FeatureSection";
 
 export default function Home() {
@@ -36,8 +26,9 @@ export default function Home() {
 							<Button
 								variant='outline'
 								size='lg'
-								className='bg-[image:var(--quantiv-purple)] hover:opacity-90 hover:bg-green-50/50 text-white hover:text-white w-full sm:w-auto'>
+								className='bg-gradient-to-br from-[#8B5CF6] to-[#8B5BFF] hover:opacity-90 hover:bg-green-50/50 text-white hover:text-white w-full sm:w-auto flex'>
 								Start Your Free Trial
+								<ArrowRight />
 							</Button>
 							<Button
 								className='bg-gradient-to-br from-[#8B5CF6] to-[#8B5BFF] bg-clip-text text-transparent border border-[#8B5CF6] w-full sm:w-auto'
@@ -87,48 +78,51 @@ export default function Home() {
 				</span>
 			</div>
 			<div className=''>
-				{/* <Card>
-					<CardHeader>
-						<CardTitle className=''>
-							<ChartColumn className='text-[#8B5CF6] transform bg-purple-100 rounded w-10 h-10 p-2   ' />
-						</CardTitle>
-
-						<CardTitle className='pt-3 '>Advanced Analytics</CardTitle>
-					</CardHeader>
-
-					<CardDescription className=''>
-						Get deep insights into your sales performance, customer behavior,
-						and market trends with our powerful analytics dashboard.
-					</CardDescription>
-				</Card>
-				<Card>
-					<CardHeader>
-						<CardTitle className=''>
-							<ShoppingBag className='text-[#8B5CF6] transform hover:scale-[1.02] bg-purple-100 rounded w-10 h-10 p-2   ' />
-						</CardTitle>
-
-						<CardTitle className='pt-3'>Inventory Management</CardTitle>
-					</CardHeader>
-
-					<CardDescription className='flex items-center justify-center '>
-						Get deep insights into your sales performance, customer behavior,
-						and market trends with our powerful analytics dashboard.
-					</CardDescription>
-				</Card>
-				<Card>
-					<CardHeader>
-						<CardTitle className=''>
-							<TrendingUp className='text-[#8B5CF6] transform hover:scale-[1.02] bg-purple-100 rounded w-10 h-10 p-2   ' />
-						</CardTitle>
-
-						<CardTitle className='pt-3'>Sales Optimization</CardTitle>
-					</CardHeader>
-
-					<CardDescription className='pl-6'>
-						Boost your revenue with AI-powered recommendations, dynamic pricing, and conversion rate optimization tools.
-					</CardDescription>
-				</Card> */}
-				<FeatureSection/>
+				<FeatureSection />
+			</div>
+			<div className='flex flex-col px-6 py-6 lg:px-25 lg:pt-10 overflow-hidden bg-[#8658e60D] items-center '>
+				<div className='w-full text-4xl lg:text-5xl items-center text-center flex-row mb-6 font-bold leading-tight'>
+					<span className='items-center tracking-tight'>
+						Ready to Transform Your{" "}
+					</span>
+					<span className='bg-gradient-to-br from-[#8B5CF6] to-[#8B5BFF] bg-clip-text text-transparent'>
+						E-Commerce Business?{" "}
+					</span>
+				</div>
+				<p className='text-lg lg:text-xl leading-relaxed tracking-tight text-[#6B7280] mb-8 max-w-lg mx-auto lg:mx-0 text-center'>
+					Join thousands of successful online businesses that trust Quantive to
+					drive their growth and maximize their profits.
+				</p>
+				<div className=' flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-end  mb-8'>
+					<Button
+						variant='outline'
+						size='xl'
+						className='bg-gradient-to-br from-[#8B5CF6] to-[#8B5BFF] hover:opacity-90 hover:bg-green-50/50 text-white hover:text-white w-full sm:w-auto '>
+						Start Your Free Trial
+						<ArrowRight />
+					</Button>
+					<Button
+						className='bg-gradient-to-br from-[#8B5CF6] to-[#8B5BFF] bg-clip-text text-transparent border border-[#8B5CF6] w-full sm:w-auto hover:text-[#8B5CF6]'
+						variant='outline'
+						size='lg'>
+						<Play size={24} color='#8B5CF6' />
+						Schedule Demo
+					</Button>
+				</div>
+				<div className='flex flex-col lg:flex-row items-start gap-8 lg:gap-20 text-[#6B7280]'>
+					<div className='flex gap-2 items-center '>
+						<CheckCircle size={20} className='text-green-500' />
+						<span>14-day free trial </span>
+					</div>
+					<div className='flex gap-2 items-center'>
+						<CheckCircle size={20} className='text-green-500' />
+						<span>No set-up fees </span>
+					</div>
+					<div className='flex gap-2 items-center'>
+						<CheckCircle size={20} className='text-green-500' />
+						<span>Cancel anytime </span>
+					</div>
+				</div>
 			</div>
 		</main>
 	);

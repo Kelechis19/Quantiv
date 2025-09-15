@@ -50,7 +50,7 @@ export default function Header1() {
 		initial: { y: -100, opacity: 0 },
 		animate: { y: 0, opacity: 1 },
 		scrolled: {
-			backdropFilter: "blur(20px)",
+			backdropFilter: "blur(10px)",
 			backgroundColor:
 				theme === "dark" ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.8)",
 			boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
@@ -69,7 +69,7 @@ export default function Header1() {
 
 	return (
 		<motion.header
-			className='fixed left-0 right-0 top-0 z-50 transition-all duration-300'
+			className='fixed left-0 right-0 top-0 z-50 transition-all duration-50'
 			variants={headerVariants}
 			initial='initial'
 			animate={isScrolled ? "scrolled" : "animate"}
@@ -155,10 +155,10 @@ export default function Header1() {
 							className='font-medium text-foreground transition-colors duration-200 hover:text-[#6a45ff]'>
 							Sign In
 						</Link>
-						<motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.95 }}>
+						<motion.div whileHover={{ scale: 1.0 }} whileTap={{ scale: 0.95 }}>
 							<Link
 								href='/signup'
-								className='inline-flex items-center space-x-2 rounded-lg bg-gradient-to-r from-[#6a45ff] to-[#6a45ff]/150 px-4 py-2 font-medium text-white transition-all duration-200 hover:shadow-lg '>
+								className='inline-flex items-center space-x-2 rounded-lg bg-gradient-to-r from-[#6a45ff] to-[#6a45ff]/150 px-4 py-2 font-medium text-white transition-all duration-200 '>
 								<span>Get Started</span>
 							</Link>
 						</motion.div>
