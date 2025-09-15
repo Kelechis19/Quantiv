@@ -4,6 +4,7 @@ import { Play, ArrowRight, CheckCircle } from "lucide-react";
 import { FeatureSection } from "@/components/web/FeatureSection";
 
 export default function Home() {
+	const features = ["14-day free trial", "No setup fees", "Cancel anytime"];
 	return (
 		<main className='font-[family-name:var(--font-geist-sans)] transition-all'>
 			<div className='px-6 py-6 lg:px-25 lg:pt-10 overflow-hidden bg-[#8658e60D]'>
@@ -109,19 +110,14 @@ export default function Home() {
 						Schedule Demo
 					</Button>
 				</div>
-				<div className='flex flex-col lg:flex-row items-start gap-8 lg:gap-20 text-[#6B7280]'>
-					<div className='flex gap-2 items-center '>
-						<CheckCircle size={20} className='text-green-500' />
-						<span>14-day free trial </span>
-					</div>
-					<div className='flex gap-2 items-center'>
-						<CheckCircle size={20} className='text-green-500' />
-						<span>No set-up fees </span>
-					</div>
-					<div className='flex gap-2 items-center'>
-						<CheckCircle size={20} className='text-green-500' />
-						<span>Cancel anytime </span>
-					</div>
+
+				<div className='flex flex-col lg:flex-row items-start gap-8 lg:gap-20 text-[#6B7280] mb-6'>
+					{features.map((feature, index) => (
+						<div key={index} className='flex gap-2 items-center'>
+							<CheckCircle size={20} className='text-green-500' />
+							<span>{feature}</span>
+						</div>
+					))}
 				</div>
 			</div>
 		</main>
